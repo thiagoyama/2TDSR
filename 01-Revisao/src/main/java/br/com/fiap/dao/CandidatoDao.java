@@ -1,13 +1,13 @@
 package br.com.fiap.dao;
 
 import java.util.List;
-import br.com.fiap.model.Candidato;
+import br.com.fiap.model.Pessoa;
 
 //Contrato, define as assinaturas dos métodos
 public interface CandidatoDao {
 
-	void cadastrar(Candidato candidato);
+	void cadastrar(Pessoa pessoa);
 	
-	List<Candidato> listar();
+	List<Pessoa> listar();
 	
 }

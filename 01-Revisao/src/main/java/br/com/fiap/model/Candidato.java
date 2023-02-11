@@ -1,47 +1,48 @@
 package br.com.fiap.model;
 
-public class Candidato {
+import java.util.List;
 
-	//final (atributo não muda o valor, classe não herda, método não sobrescreve)
-	//static -> o objeto não é necessário para utilizar o método ou atributo
-	//Modificadores de acesso:
-	//public -> todos
-	//protected -> a classe, as classes do mesmo pacote e filhas
-	//default/package -> as classes do mesmo pacote
-	//private -> somente a classe
+public class Candidato extends Pessoa {
+
+	private List<String> skills;
 	
-	//Atributos
-	private String nome;
-	//Tipos primitivos: boolean, char, byte, short, int, long, float, double 
-	private int idade;
+	private String escolaridade;
 	
-	//Construtores : não tem retorno (nem void) e tem o mesmo nome da Classe
-	//Construtor que recebe o nome do Candidato
+	private boolean deficiente;
+	
+	//Construtor que recebe o nome e skills
+	public Candidato(String nome, List<String> skills) {
+		super(nome);
+		this.skills = skills;
+	}
+	
 	public Candidato(String nome) {
-		this.nome = nome;
+		super(nome);
 	}
-	
-	//Criar um construtor que recebe o nome e idade
-	public Candidato(String nome, int idade) {
-		this.nome = nome;
-		this.idade = idade;
-	}
-	
+
 	//Getters e Setters
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-	
-	public String getNome() {
-		return this.nome;
+	public List<String> getSkills() {
+		return skills;
 	}
 
-	public int getIdade() {
-		return idade;
+	public void setSkills(List<String> skills) {
+		this.skills = skills;
 	}
 
-	public void setIdade(int idade) {
-		this.idade = idade;
+	public String getEscolaridade() {
+		return escolaridade;
+	}
+
+	public void setEscolaridade(String escolaridade) {
+		this.escolaridade = escolaridade;
+	}
+
+	public boolean isDeficiente() {
+		return deficiente;
+	}
+
+	public void setDeficiente(boolean deficiente) {
+		this.deficiente = deficiente;
 	}
 	
 }

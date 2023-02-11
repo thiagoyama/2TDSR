@@ -1,4 +1,4 @@
-package br.com.fiap.model;
+package br.com.fiap.teste;
 
 import java.util.HashMap;
 import java.util.Map;
