@@ -5,18 +5,19 @@ import java.util.Arrays;
 import java.util.List;
 
 import br.com.fiap.model.Candidato;
+import br.com.fiap.model.Genero;
 
 public class TesteCandidato {
 
-	//Criar um método main
-	//Instanciar um candidato com o nome "Nome" e as Skills "Comunicação", "Raciocinio Logico", "Trabalho em equipe"
+	//Criar um mï¿½todo main
+	//Instanciar um candidato com o nome "Nome" e as Skills "Comunicaï¿½ï¿½o", "Raciocinio Logico", "Trabalho em equipe"
 	public static void main(String[] args) {
 		
 		//Criar uma lista de String
 		List<String> skills = new ArrayList<String>();
 		//Adicionar as skills na lista
-		skills.add("Comunicação");
-		skills.add("Racioncínio Lógico");
+		skills.add("Comunicaï¿½ï¿½o");
+		skills.add("Racioncï¿½nio Lï¿½gico");
 		skills.add("Trabalho em Equipe");
 		
 		//Instanciar o candidado com o nome e a lista de skills
@@ -25,19 +26,29 @@ public class TesteCandidato {
 		//Exibir os valores dos atributos...
 		System.out.println("Nome do candidato: " + c.getNome());
 		System.out.println("Skills:");
-		//Laço de repetição
+		//Laï¿½o de repetiï¿½ï¿½o
 		for (int i=0; i < c.getSkills().size() ; i ++) {
 			System.out.println(c.getSkills().get(i));
 		}
 		
 		//Instanciando um Candidato, definindo o nome e criando uma lista a partir de um vetor de String
 		Candidato c2 = new Candidato("Almeida", 
-				Arrays.asList(new String[] {"Comunicação", "Raciocínio Lógico", "Trabalho em Equipe"}));
+				Arrays.asList(new String[] {"Comunicaï¿½ï¿½o", "Raciocï¿½nio Lï¿½gico", "Trabalho em Equipe"}));
 		
 		//Foreach para exibir as skills do candidato 2
 		for (String s : c2.getSkills()) {
 			System.out.println(s);
 		}
 		
+		//Definir o genero do candidato
+		c2.setGenero(Genero.FEMININO);
+		
+		//Validar se o candidato Ã© mulher
+		if (c2.getGenero() == Genero.FEMININO) {
+			System.out.println("Ã‰ do genero feminino");
+		}
+		
+		//Exibir o genero do candidato
+		System.out.println(c2.getGenero());
 	}
 }
