@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Built-By: logonpflocal
-Build-Jdk: 18.0.1.1
+Built-By: thiagoyama
+Build-Jdk: 17.0.1
 Created-By: Maven Integration for Eclipse
 
