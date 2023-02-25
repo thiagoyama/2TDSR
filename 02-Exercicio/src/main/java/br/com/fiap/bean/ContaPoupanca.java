@@ -21,12 +21,7 @@ public class ContaPoupanca extends Conta implements ContaInvestimento {
 	public double calculaRetornoInvestimento() {
 		return saldo * RENDIMENTO;
 	}
-
-	@Override
-	public void depositar(double valor) {
-		saldo += valor;
-	}
-
+	
 	//Valida se o saldo é suficiente, junto com a taxa de retirada (R$)
 	@Override
 	public void retirar(double valor) throws Exception {

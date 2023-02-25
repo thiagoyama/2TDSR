@@ -21,9 +21,16 @@ public abstract class Conta {
 	
 	public Conta() {}
 
-	public abstract void depositar(double valor);
+	public void depositar(double valor) {
+		this.saldo += valor;
+	}
 	
 	public abstract void retirar(double valor) throws Exception;
+	
+	@Override
+	public String toString() {
+		return "Conta: \nAgência: " + agencia + "\nNúmero:" + numero +"\nSaldo: " + saldo + "\n";
+	}
 	
 	//Getters e Setters (CRTL + 3 -> ggas)
 	public int getAgencia() {

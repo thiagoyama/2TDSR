@@ -14,11 +14,6 @@ public class ContaCorrente extends Conta {
 		this.tipo = tipo;
 	}
 
-	@Override 
-	public void depositar(double valor) {
-		this.saldo += valor; // saldo = saldo + valor;
-	}
-
 	@Override
 	public void retirar(double valor) throws Exception {
 		//Validar se a conta é comum e se o valor do saque é maior do que o saldo
